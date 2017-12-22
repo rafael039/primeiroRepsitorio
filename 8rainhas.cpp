@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-//hey
+
 using namespace std;
 
 // conta a quantidade de soluções
