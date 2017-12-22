@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector>
-
+//hey
 using namespace std;
 
-// conta a quantidade de soluções
+// conta a quantidade de soluÃ§Ãµes
 int sol = 0;
 
-// função para mostrar o tabuleiro
+// funÃ§Ã£o para mostrar o tabuleiro
 void mostrarTabuleiro(vector<vector<int> > & tab, int N)
 {
 	for(int i = 0; i < N; i++)
@@ -23,8 +23,8 @@ void mostrarTabuleiro(vector<vector<int> > & tab, int N)
 	cout << "\n";
 }
 
-// verifica se é seguro colocar a rainha numa determinada coluna
-// isso poderia ser feito com menos código, mas assim ficou mais didático
+// verifica se Ã© seguro colocar a rainha numa determinada coluna
+// isso poderia ser feito com menos cÃ³digo, mas assim ficou mais didÃ¡tico
 bool seguro(vector<vector<int> > & tab, int N, int lin, int col)
 {
 	int i, j;
@@ -56,7 +56,7 @@ bool seguro(vector<vector<int> > & tab, int N, int lin, int col)
 			return false;
 	}
 
-	// verifica se ocorre ataque na diagonal secundária
+	// verifica se ocorre ataque na diagonal secundÃ¡ria
 	// acima e abaixo
 	for(i = lin, j = col; i >= 0 && j < N; i--, j++)
 	{
@@ -69,13 +69,13 @@ bool seguro(vector<vector<int> > & tab, int N, int lin, int col)
 			return false;
 	}
 
-	// se chegou aqui, então está seguro (retorna true)
+	// se chegou aqui, entÃ£o estÃ¡ seguro (retorna true)
 	return true;
 }
 
 /*
-	função que resolve o problema
-	retorna true se conseguiu resolver e false caso contrário
+	funÃ§Ã£o que resolve o problema
+	retorna true se conseguiu resolver e false caso contrÃ¡rio
 */
 void executar(vector<vector<int> > & tab, int N, int col)
 {
@@ -89,7 +89,7 @@ void executar(vector<vector<int> > & tab, int N, int col)
 
 	for(int i = 0; i < N; i++)
 	{
-		// verifica se é seguro colocar a rainha naquela coluna
+		// verifica se Ã© seguro colocar a rainha naquela coluna
 		if(seguro(tab, N, i, col))
 		{
 			// insere a rainha (marca com 1)
@@ -106,7 +106,7 @@ void executar(vector<vector<int> > & tab, int N, int col)
 
 int main(int argc, char *argv[])
 {
-	// número de rainhas
+	// nÃºmero de rainhas
 	int N = 8;
 
 	// tabuleiro (matriz)
@@ -119,10 +119,10 @@ int main(int argc, char *argv[])
 		tab.push_back(linha);
 	}
 
-	// imprime todas as soluções
+	// imprime todas as soluÃ§Ãµes
 	executar(tab, N, 0);
 
-	// imprime a quantidade de soluções
+	// imprime a quantidade de soluÃ§Ãµes
 	cout << "\nEncontradas " << sol << " solucoes!\n";
 
 	return 0;
